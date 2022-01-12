@@ -30,31 +30,6 @@ const Home = () => {
                 }, 
             });
         }
-        //  const sOne = gsap.to(el.current, {
-        //     scrollTrigger: {
-        //         trigger: el.current,
-        //         start: 'top top',
-        //         markers: true,
-        //         pinSpacing: false,
-        //         pin: true,
-        //     }, 
-
-        // });
-
-        // const sTwo = gsap.to(em.current, {
-        //     scrollTrigger: {
-        //         trigger: em.current,
-        //         start: 'top top',
-        //         markers: true,
-        //         pinSpacing: false,
-        //         pin: true,
-        //     }, 
-
-        // });
-
-        // const panel = gsap.to(q('.panel'), {
-        //     opacity: '0.35'
-        // });
 
         return () => {
             // sOne.kill();
