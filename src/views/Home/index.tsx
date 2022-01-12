@@ -4,18 +4,17 @@ import styles from './Home.module.css';
 import { gsap } from 'gsap';
 
 const Home = () => {
-    const sectionOneRef = useRef();
-    let sectionsAni = gsap.timeline();
+    const el = useRef();
+    const q = gsap.utils.selector(el);
     useEffect(() => {
         // @ts-nocheck
-        sectionsAni.to(sectionOneRef.current, {
-            opacity: 0,
-            duration: 2,
-        }, 1);
+        gsap.to(q('.section'), {
+            x: 100
+        });
     });
     return (
-        <main>
-            <section className={`${styles.section} ${styles.grayOne}`} ref={sectionOneRef}>
+        <main ref={el}>
+            <section className={`${styles.section} ${styles.grayOne} section`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     A is for Apple
                 </Typography>
@@ -29,7 +28,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={`${styles.section} ${styles.grayTwo}`}>
+            <section className={`${styles.section} ${styles.grayTwo} section`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     B is for Button
                 </Typography>
@@ -43,7 +42,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={`${styles.section} ${styles.grayThree}`}>
+            <section className={`${styles.section} ${styles.grayThree} section`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     C is for Crayons
                 </Typography>
@@ -57,7 +56,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section  className={`${styles.section} ${styles.grayFour}`}>
+            <section  className={`${styles.section} ${styles.grayFour} section`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     D is for Doggos
                 </Typography>
@@ -71,7 +70,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={`${styles.section} ${styles.grayFive}`}>
+            <section className={`${styles.section} ${styles.grayFive} section`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     E is for Elephants
                 </Typography>
@@ -85,7 +84,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={`${styles.section} ${styles.graySix}`}>
+            <section className={`${styles.section} ${styles.graySix} section`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     F is for Fungi
                 </Typography>
@@ -99,7 +98,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={`${styles.section} ${styles.graySeven}`}>
+            <section className={`${styles.section} ${styles.graySeven} section`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     G is for Ghosts and Ghouls
                 </Typography>
