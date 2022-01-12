@@ -7,7 +7,6 @@ const Home = () => {
     const el = useRef();
     const q = gsap.utils.selector(el);
     useEffect(() => {
-        // @ts-nocheck
         gsap.to(q('.section'), {
             x: 100
         });
