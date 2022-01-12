@@ -1,4 +1,18 @@
 /* the all over css styles */
+html {
+    --main-bg-color: blue;
+    /* gray scale */
+    --gray-scale-one: #eee;
+    --gray-scale-two: #ccc;
+    --gray-scale-three: #999;
+    --gray-scale-four: #666;
+    --gray-scale-five: #333;
+    --gray-scale-six: #000;
+    --gray-scale-seven: #f7f7f7;
+    --light-text: #f7f7f7;
+    --dark-text: #333;
+}
+
 .hidden {
     display: none;
 }
