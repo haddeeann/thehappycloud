@@ -13,18 +13,17 @@ const Home = () => {
         gsap.to(el.current, {
             scrollTrigger: {
                 trigger: el.current,
-                start: 'top center',
-                toggleActions: 'restart pause reverse pause',
+                start: 'top top',
                 markers: true,
+                pinSpacing: false,
+                pin: true,
             }, 
-            x: 400,
-            rotation: 360,
-            duration: 3,
+
         })
     });
     return (
         <main>
-            <section className={`${styles.section} ${styles.grayOne} panel`}>
+            <section className={`${styles.section} ${styles.grayOne} panel`} ref={el}>
                 <Typography variant='h2' component='div' gutterBottom>
                     A is for Apple
                 </Typography>
@@ -38,7 +37,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={`${styles.section} ${styles.grayTwo} panel`} ref={el}>
+            <section className={`${styles.section} ${styles.grayTwo} panel`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     B is for Button
                 </Typography>
