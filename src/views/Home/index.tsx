@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Button, Typography } from '@mui/material';
 import styles from './Home.module.css';
+import { gsap } from 'gsap';
 
 const Home = () => {
+    const sectionOneRef = useRef();
+    let sectionsAni = gsap.timeline();
+    useEffect(() => {
+        // @ts-nocheck
+        sectionsAni.to(sectionOneRef.current, {
+            opacity: 0,
+            duration: 2,
+        }, 1);
+    });
     return (
         <main>
-            <section className={`${styles.section} ${styles.grayOne}`}>
+            <section className={`${styles.section} ${styles.grayOne}`} ref={sectionOneRef}>
                 <Typography variant='h2' component='div' gutterBottom>
                     A is for Apple
                 </Typography>
