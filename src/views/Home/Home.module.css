@@ -2,37 +2,37 @@
     height: 100vh;
 }
 
-#sectionOne {
+.grayOne {
     background-color: var(--gray-scale-one);
     color: var(--dark-text);
 }
 
-#sectionTwo {
+.grayTwo {
     background-color: var(--gray-scale-two);
     color: var(--dark-text);
 }
 
-#sectionThree {
+.grayThree {
     background-color: var(--gray-scale-three);
     color: var(--light-text);
 }
 
-#sectionFour {
+.grayFour {
     background-color: var(--gray-scale-four);
     color: var(--light-text);
 }
 
-#sectionFive {
+.grayFive {
     background-color: var(--gray-scale-five);
     color: var(--light-text);
 }
 
-#sectionSix {
+.graySix {
     background-color: var(--gray-scale-six);
     color: var(--light-text);
 }
 
-#sectionSeven {
+.graySeven {
     background-color: var(--gray-scale-seven);
     color: var(--dark-text);
 }

@@ -5,7 +5,7 @@ import styles from './Home.module.css';
 const Home = () => {
     return (
         <main>
-            <section className={styles.section} id={styles.sectionOne}>
+            <section className={`${styles.section} ${styles.grayOne}`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     A is for Apple
                 </Typography>
@@ -19,7 +19,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={styles.section} id={styles.sectionTwo}>
+            <section className={`${styles.section} ${styles.grayTwo}`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     B is for Button
                 </Typography>
@@ -33,7 +33,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={styles.section} id={styles.sectionThree}>
+            <section className={`${styles.section} ${styles.grayThree}`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     C is for Crayons
                 </Typography>
@@ -47,7 +47,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section  className={styles.section} id={styles.sectionFour}>
+            <section  className={`${styles.section} ${styles.grayFour}`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     D is for Doggos
                 </Typography>
@@ -61,7 +61,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={styles.section} id={styles.sectionFive}>
+            <section className={`${styles.section} ${styles.grayFive}`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     E is for Elephants
                 </Typography>
@@ -75,7 +75,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={styles.section} id={styles.sectionSix}>
+            <section className={`${styles.section} ${styles.graySix}`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     F is for Fungi
                 </Typography>
@@ -89,7 +89,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={styles.section} id={styles.sectionSeven}>
+            <section className={`${styles.section} ${styles.graySeven}`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     G is for Ghosts and Ghouls
                 </Typography>
