@@ -42,8 +42,8 @@ const Home = () => {
     return (
         <main ref={mainRef}>
             <section className={`${styles.section} ${styles.grayOne} panel`} ref={aRef}>
-                <Typography variant='h2' component='div' gutterBottom>
-                    A is for Apple
+                <Typography variant='h1' component='div' gutterBottom>
+                    The Happy Cloud
                 </Typography>
             </section>
             <section className={`${styles.section} ${styles.grayTwo} panel`} ref={bRef}>
