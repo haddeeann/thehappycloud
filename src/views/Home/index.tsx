@@ -3,17 +3,28 @@ import { Button, Typography } from '@mui/material';
 import styles from './Home.module.css';
 import { gsap } from 'gsap';
 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Home = () => {
     const el = useRef();
-    const q = gsap.utils.selector(el);
     useEffect(() => {
-        gsap.to(q('.section'), {
-            x: 100
-        });
+        gsap.to(el.current, {
+            scrollTrigger: {
+                trigger: el.current,
+                start: 'top center',
+                toggleActions: 'restart pause reverse pause',
+                markers: true,
+            }, 
+            x: 400,
+            rotation: 360,
+            duration: 3,
+        })
     });
     return (
-        <main ref={el}>
-            <section className={`${styles.section} ${styles.grayOne} section`}>
+        <main>
+            <section className={`${styles.section} ${styles.grayOne} panel`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     A is for Apple
                 </Typography>
@@ -27,7 +38,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={`${styles.section} ${styles.grayTwo} section`}>
+            <section className={`${styles.section} ${styles.grayTwo} panel`} ref={el}>
                 <Typography variant='h2' component='div' gutterBottom>
                     B is for Button
                 </Typography>
@@ -41,7 +52,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={`${styles.section} ${styles.grayThree} section`}>
+            <section className={`${styles.section} ${styles.grayThree} panel`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     C is for Crayons
                 </Typography>
@@ -55,7 +66,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section  className={`${styles.section} ${styles.grayFour} section`}>
+            <section  className={`${styles.section} ${styles.grayFour} panel`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     D is for Doggos
                 </Typography>
@@ -69,7 +80,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={`${styles.section} ${styles.grayFive} section`}>
+            <section className={`${styles.section} ${styles.grayFive} panel`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     E is for Elephants
                 </Typography>
@@ -83,7 +94,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={`${styles.section} ${styles.graySix} section`}>
+            <section className={`${styles.section} ${styles.graySix} panel`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     F is for Fungi
                 </Typography>
@@ -97,7 +108,7 @@ const Home = () => {
                     and this is a story all about how <span> my life got flipped and turned upside down.</span>
                 </Typography>
             </section>
-            <section className={`${styles.section} ${styles.graySeven} section`}>
+            <section className={`${styles.section} ${styles.graySeven} panel`}>
                 <Typography variant='h2' component='div' gutterBottom>
                     G is for Ghosts and Ghouls
                 </Typography>
